@@ -8,17 +8,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var DiceService = (function () {
+    function DiceService() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Under construction...</h1>\n    <game-board-component></game-board-component>\n    "
-        }), 
+    DiceService.prototype.getDice = function () {
+        return DICE;
+    };
+    DiceService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], DiceService);
+    return DiceService;
 })();
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DiceService = DiceService;
+var DICE_IMAGES = [
+    'app/images/dice/dice-one.png',
+    'app/images/dice/dice-two.png',
+    'app/images/dice/dice-three.png',
+    'app/images/dice/dice-four.png',
+    'app/images/dice/dice-five.png',
+    'app/images/dice/dice-six.png'
+];
+var DICE = [
+    { value: 1, img: DICE_IMAGES[0] },
+    { value: 2, img: DICE_IMAGES[1] },
+    { value: 3, img: DICE_IMAGES[2] },
+    { value: 4, img: DICE_IMAGES[3] },
+    { value: 5, img: DICE_IMAGES[4] },
+];
+//# sourceMappingURL=dice.service.js.map

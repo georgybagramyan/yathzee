@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    template: `
+    <h1>Under construction...</h1>
+    <game-board-component></game-board-component>
+    `
 })
 export class AppComponent { }

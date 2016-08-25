@@ -8,17 +8,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var player_1 = require('../entities/player');
+var PlayerComponent = (function () {
+    function PlayerComponent() {
     }
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', player_1.Player)
+    ], PlayerComponent.prototype, "player", void 0);
+    PlayerComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>Under construction...</h1>\n    <game-board-component></game-board-component>\n    "
+            selector: 'player-component',
+            template: "\n    <div>\n        <img src=\"{{player.img}}\">\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], PlayerComponent);
+    return PlayerComponent;
 })();
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.PlayerComponent = PlayerComponent;
+//# sourceMappingURL=player.component.js.map

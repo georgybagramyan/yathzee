@@ -10,13 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('../components/app.component');
+var game_board_component_1 = require('../components/game-board.component');
+var player_component_1 = require('../components/player.component');
+var die_component_1 = require('../components/die.component');
+var player_service_1 = require('../services/player.service');
+var dice_service_1 = require('../services/dice.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            declarations: [app_component_1.AppComponent, game_board_component_1.GameBoardComponent, player_component_1.PlayerComponent, die_component_1.DieComponent],
+            providers: [player_service_1.PlayerService, dice_service_1.DiceService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
