@@ -1,0 +1,79 @@
+<div class="game-container">
+
+    <div class="game-board-container">
+        <player-component [player]="me"></player-component>
+
+        <div class="dice-container">
+            <ul>
+                <li *ngFor="let die of dice" class="die" >
+                    <img src="{{die.img}}" (click)="fixeDie(die)" [class.selected]="fixedDice.includes(die)">
+                </li>
+            </ul>
+        </div>
+
+        <button class="roll-button" (click)="rollDice()">Roll</button>
+
+        <player-component [player]="opponent"></player-component>
+    </div>
+
+    <div class="scoreboard-container">
+
+        <div class="player-tag-container">
+            <img src="{{me.img}}" class="player-one" height="50px" width="50px">
+            <img src="{{opponent.img}}" class="player-two" height="50px" width="50px">
+        </div>
+
+        <div class="player-one">
+            <div class="upper-bound-container">
+                <header class="bound-heading">
+                    <div class="score-title bound-score-title-left">
+                        <h3>Upper: </h3>
+                        <h3 class="score">100</h3>
+                    </div>
+                    <div class="score-title bonus-score-title-right">
+                        <h3>Bonus: </h3>
+                        <h3 class="score">100</h3>
+                    </div>
+                </header>
+                <ul class="score-icons-container">
+                    <li *ngFor="let upperBoundImg of upperBoundImages; let i = index">
+                        <div class="score-box">
+                            <img src="{{upperBoundImg}}"/>
+                            <h4 class="score-box-score">{{dice | upperBoundScore:upperBoundImg}}</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lower-bound-container">
+                <header class="bound-heading">
+                    <div class="score-title bound-score-title-left">
+                        <h3>Lower: </h3>
+                        <h3 class="score">100</h3>
+                    </div>
+                    <div class="score-title bonus-score-title-right">
+                        <h3>Bonus: </h3>
+                        <h3 class="score">100</h3>
+                    </div>
+                </header>
+                <ul class="score-icons-container">
+                    <li *ngFor="let lowerBoundImg of lowerBoundImages">
+                        <div class="score-box">
+                            <img src="{{lowerBoundImg}}"/>
+                            <h4 class="score-box-score">0</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <footer class="bound-footer">
+                <div class="bound-footer-content-container">
+                    <h2>Score:</h2>
+                    <h2 class="score">0</h2>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+</div>

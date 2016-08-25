@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from '../components/app.component';
-import { GameBoardComponent }  from '../components/game-board.component';
+import { GameBoardComponent }  from '../components/game-board/game-board.component';
 import { PlayerComponent }  from '../components/player.component';
 import { DieComponent }  from '../components/die.component';
 

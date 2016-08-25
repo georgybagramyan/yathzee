@@ -1,0 +1,98 @@
+.player-one{
+    margin-left: 10px;
+}
+
+.player-two{
+    float:right;
+    margin-right: 10px;
+}
+
+.game-container{
+    display: inline-flex;
+    flex-direction: row
+}
+
+.scoreboard-container{
+    height: 60%;
+}
+
+.score-title{
+    display: inline-flex;
+    flex-direction: row
+}
+
+.bound-score-title-left{
+    margin-left: 10px;
+}
+
+.bonus-score-title-right{
+    margin-left: 38%;
+}
+
+.score-icons-container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.score-icons-container li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.score-box{
+    margin: 10px;
+}
+
+.score-box-score{
+    text-align: center;
+}
+
+.score{
+    padding-left: 10px;
+}
+
+.bound-footer{
+    text-align: center;
+}
+
+.bound-footer-content-container{
+    display: inline-flex;
+    flex-direction: row
+}
+
+.dice-container{
+    display: inline-block;
+}
+
+.dice-container ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dice-container li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.dice-container img.selected{
+    opacity: 0.4;
+}
+
+.game-board-container{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.die{
+    margin: 10px;
+}
+
+.button-container button{
+    margin: 10px;
+    padding: 20px
+}
+
+.roll-button{
+    margin: auto;
+}
